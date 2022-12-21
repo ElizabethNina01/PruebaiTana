@@ -25,4 +25,12 @@ export class AppComponent {
       )
   }
 
+  buscar(){
+    this.dataService.getByWord(this.busqueda).subscribe(
+      response=>{
+        this.allData=response?.result.records;
+      }
+    );
+  
+  }
 }

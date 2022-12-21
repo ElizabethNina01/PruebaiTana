@@ -4,11 +4,11 @@
 
   <div fxLayout="row" fxLayoutAlign="space-around center" class="bb" align="center">
     <mat-form-field appearance="fill" >
-      <mat-label>Ingresa una palabra</mat-label>
+      <mat-label>Ingresa una palabra, año o cantidad</mat-label>
       <input matInput [(ngModel)]="busqueda" />
       <mat-icon matPrefix>search</mat-icon>
     </mat-form-field>
-    <button mat-raised-button color="primary"  style="margin: 10px" >Buscar</button>
+    <button mat-raised-button color="primary" (click)="buscar()" style="margin: 10px" >Buscar</button>
   </div>
 
   <br>

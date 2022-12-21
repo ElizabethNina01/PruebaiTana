@@ -21,5 +21,7 @@ export class DataService {
     return this.http.get<Format>(this.Path);
   }
 
- 
+  getByWord(word: string): Observable<Format>{
+    return this.http.get<Format>(this.Path+"&q="+word);
+  }
 }
