@@ -1,15 +1,18 @@
 
 <div class="margin mat-elevation-z8" fxLayout="row" fxLayoutAlign="center center" >
   <br><br>
+
   <div fxLayout="row" fxLayoutAlign="space-around center" class="bb" align="center">
     <mat-form-field appearance="fill" >
-    <mat-label>Ingresa una palabra</mat-label>
-    <input matInput [(ngModel)]="busqueda" />
-    <mat-icon matPrefix>search</mat-icon>
-  </mat-form-field>
-  <button mat-raised-button color="primary" style="margin: 10px" >Buscar</button>
+      <mat-label>Ingresa una palabra</mat-label>
+      <input matInput [(ngModel)]="busqueda" />
+      <mat-icon matPrefix>search</mat-icon>
+    </mat-form-field>
+    <button mat-raised-button color="primary"  style="margin: 10px" >Buscar</button>
   </div>
+
   <br>
+
   <mat-grid-list cols="5" rowHeight="5:1" style="margin: 10px;">
     <mat-grid-tile style="background-color: rgb(0, 0, 162) ; color: aliceblue; font-weight:bold ;">Id</mat-grid-tile>
     
@@ -22,21 +25,36 @@
     <mat-grid-tile style="background-color: rgb(0, 0, 162) ; color: aliceblue; font-weight:bold ;">Domestic exports</mat-grid-tile>
   </mat-grid-list>
   <div class="example-table-container">
+    <div *ngFor="let data of allData; let l=index">
     
+      <mat-grid-list cols="5" rowHeight="5:1">
+        <mat-grid-tile style="border: solid 2px #000;">{{data._id}}</mat-grid-tile>
+        
+        <mat-grid-tile style="border: solid 2px #000;">{{data.year}}</mat-grid-tile>
+        
+        <mat-grid-tile style="border: solid 2px #000;">{{data.area}}</mat-grid-tile>
+        
+        <mat-grid-tile style="border: solid 2px #000;">{{data.rank}}</mat-grid-tile>
+        
+        <mat-grid-tile style="border: solid 2px #000;">{{data.domestic_exports}}</mat-grid-tile>
+      </mat-grid-list>
+
+</div>
    
   </div>
   
   
-<br><br>
+  <br><br>
 
   <div fxLayout="row" fxLayoutAlign="space-around center" class="bb" align="center">
       
       <button mat-raised-button color="primary" style="margin: 10px" >Insertar</button>
       <button mat-raised-button color="primary" style="margin: 10px" >Modificar</button>
       <button mat-raised-button color="primary" style="margin: 10px" >Eliminar</button>
-    </div>
-    <br><br>
-    
+  </div>
+  
+  <br><br>
+
 </div>
 
 <router-outlet></router-outlet>
