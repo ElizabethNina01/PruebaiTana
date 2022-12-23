@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Elizabeth\\BackendData\\BackendData.csproj": {}
+    "C:\\Users\\Elizabeth\\subirback\\PruebaiTana\\BackendData.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Elizabeth\\BackendData\\BackendData.csproj": {
+    "C:\\Users\\Elizabeth\\subirback\\PruebaiTana\\BackendData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Elizabeth\\BackendData\\BackendData.csproj",
+        "projectUniqueName": "C:\\Users\\Elizabeth\\subirback\\PruebaiTana\\BackendData.csproj",
         "projectName": "BackendData",
-        "projectPath": "C:\\Users\\Elizabeth\\BackendData\\BackendData.csproj",
+        "projectPath": "C:\\Users\\Elizabeth\\subirback\\PruebaiTana\\BackendData.csproj",
         "packagesPath": "C:\\Users\\Elizabeth\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Elizabeth\\BackendData\\obj\\",
+        "outputPath": "C:\\Users\\Elizabeth\\subirback\\PruebaiTana\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Elizabeth\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -72,11 +72,11 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.1, )"
+              "version": "[7.0.0-rc.2.22472.11, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.2.3, )"
+              "version": "[6.4.0, )"
             }
           },
           "imports": [
