@@ -16,7 +16,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { DialogComponent } from './dialog/dialog.component';
-
+import { MatExpansionModule } from '@angular/material/expansion';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +41,7 @@ import { DialogComponent } from './dialog/dialog.component';
     MatFormFieldModule,
     MatIconModule,
     MatSelectModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

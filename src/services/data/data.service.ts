@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {EMPTY, EmptyError, Observable} from 'rxjs';
-import { Record } from './models/data/data.model';
-import { Format } from './models/format/format.model';
-import { ResultModel } from './models/resultModel/result-model.model';
+import { Record } from '../../models/data/data.model';
+import { Format } from '../../models/format/format.model';
+import { ResultModel } from '../../models/resultModel/result-model.model';
 @Injectable({
   providedIn: 'root'
 })

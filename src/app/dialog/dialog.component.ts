@@ -4,7 +4,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Validators, FormGroup, FormBuilder, FormControl, FormGroupDirective,
    NgForm} from '@angular/forms';
 import { Record } from 'src/models/data/data.model';
-import { RecordService } from 'src/record.service';
+import { RecordService } from 'src/services/record/record.service';
 
 @Component({
   selector: 'app-dialog',
@@ -12,12 +12,12 @@ import { RecordService } from 'src/record.service';
 })
 export class DialogComponent implements OnInit {
   opcion= '';
-  itemModel: Record = new Record();
+  recordModel: Record = new Record();
   id=0;
   year='';
   area='';
   rank=0.0;
-  domestic=0;
+  domestic='';
   constructor(@Inject(MAT_DIALOG_DATA) public data: string, 
     private matDialogRef: MatDialogRef<DialogComponent>, private service: RecordService) {
 
@@ -32,15 +32,25 @@ export class DialogComponent implements OnInit {
     
     switch(this.opcion){
       case 'Insertar':{
-       
+        this.recordModel.area=this.area;
+        this.recordModel.rank=this.rank;
+        this.recordModel.year=this.year;
+        this.recordModel.domestic_exports=this.domestic;
+        this.service.postRecord(this.recordModel).subscribe();
         this.reloadPage();
       };break;
 
       case 'Modificar':{
+        this.recordModel.area=this.area;
+        this.recordModel.rank=this.rank;
+        this.recordModel.year=this.year;
+        this.recordModel.domestic_exports=this.domestic;
+        this.service.updateRecordbyId(this.id,this.recordModel);
         this.reloadPage();
       };break;
 
       case 'Eliminar':{
+        this.service.deleteRecord(this.id).subscribe();
         this.reloadPage();
       };break;
     }

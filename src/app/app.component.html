@@ -25,47 +25,6 @@
     <mat-grid-tile style="background-color: rgb(0, 0, 162) ; color: aliceblue; font-weight:bold ;">Domestic exports</mat-grid-tile>
   </mat-grid-list>
   <div class="example-table-container">
-    <div *ngFor="let data of allData; let l=index">
-    
-      <mat-grid-list cols="5" rowHeight="5:1">
-        <mat-grid-tile style="border: solid 2px #000;">{{data._id}}</mat-grid-tile>
-        
-        <mat-grid-tile style="border: solid 2px #000;">{{data.year}}</mat-grid-tile>
-        
-        <mat-grid-tile style="border: solid 2px #000;">{{data.area}}</mat-grid-tile>
-        
-        <mat-grid-tile style="border: solid 2px #000;">{{data.rank}}</mat-grid-tile>
-        
-        <mat-grid-tile style="border: solid 2px #000;">{{data.domestic_exports}}</mat-grid-tile>
-      </mat-grid-list>
-
-</div>
-   
-  </div>
-  
-  
-  <br><br>
-
-  <div fxLayout="row" fxLayoutAlign="space-around center" class="bb" align="center">
-      
-    <button mat-raised-button color="primary" style="margin: 10px" (click)="openDialog('Insertar')">Insertar artículo</button>
-    <button mat-raised-button color="primary" style="margin: 10px" (click)="openDialog('Modificar')">Modificar artículo</button>
-    <button mat-raised-button color="primary" style="margin: 10px" (click)="openDialog('Eliminar')">Eliminar artículo</button>
- </div>
-  
-  <br><br>
-  <mat-grid-list cols="5" rowHeight="5:1" style="margin: 10px;">
-    <mat-grid-tile style="background-color: rgb(0, 0, 162) ; color: aliceblue; font-weight:bold ;">Id</mat-grid-tile>
-    
-    <mat-grid-tile style="background-color: rgb(0, 0, 162) ; color: aliceblue; font-weight:bold ;">Year</mat-grid-tile>
-    
-    <mat-grid-tile style="background-color: rgb(0, 0, 162) ; color: aliceblue; font-weight:bold ;">Area</mat-grid-tile>
-    
-    <mat-grid-tile style="background-color: rgb(0, 0, 162) ; color: aliceblue; font-weight:bold ;">Rank</mat-grid-tile>
-    
-    <mat-grid-tile style="background-color: rgb(0, 0, 162) ; color: aliceblue; font-weight:bold ;">Domestic exports</mat-grid-tile>
-  </mat-grid-list>
-  <div class="example-table-container">
     <div *ngFor="let data of allRecords; let l=index">
     
       <mat-grid-list cols="5" rowHeight="5:1">
@@ -83,6 +42,70 @@
 </div>
    
   </div>
+  
+  
+
+
+  <div fxLayout="row" fxLayoutAlign="space-around center" class="bb" align="center">
+      
+    <button mat-raised-button color="primary" style="margin: 10px" (click)="openDialog('Insertar')">Insertar artículo</button>
+    <button mat-raised-button color="primary" style="margin: 10px" (click)="openDialog('Modificar')">Modificar artículo</button>
+    <button mat-raised-button color="primary" style="margin: 10px" (click)="openDialog('Eliminar')">Eliminar artículo</button>
+ </div> 
+  <br><br>
+  
+
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h1>Data original</h1>
+        </mat-panel-title>
+      
+      </mat-expansion-panel-header>
+      <div fxLayout="row" fxLayoutAlign="space-around center" class="bb" align="center">
+        <mat-form-field appearance="fill" >
+          <mat-label>Ingresa una palabra, año o cantidad</mat-label>
+          <input matInput [(ngModel)]="busqueda" />
+          <mat-icon matPrefix>search</mat-icon>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="buscar()" style="margin: 10px" >Buscar</button>
+      </div>
+      <mat-grid-list cols="5" rowHeight="5:1" style="margin: 10px;">
+        <mat-grid-tile style="background-color: rgb(0, 0, 162) ; color: aliceblue; font-weight:bold ;">Id</mat-grid-tile>
+        
+        <mat-grid-tile style="background-color: rgb(0, 0, 162) ; color: aliceblue; font-weight:bold ;">Year</mat-grid-tile>
+        
+        <mat-grid-tile style="background-color: rgb(0, 0, 162) ; color: aliceblue; font-weight:bold ;">Area</mat-grid-tile>
+        
+        <mat-grid-tile style="background-color: rgb(0, 0, 162) ; color: aliceblue; font-weight:bold ;">Rank</mat-grid-tile>
+        
+        <mat-grid-tile style="background-color: rgb(0, 0, 162) ; color: aliceblue; font-weight:bold ;">Domestic exports</mat-grid-tile>
+      </mat-grid-list>
+      <div class="example-table-container">
+        <div *ngFor="let data of allData; let l=index">
+        
+          <mat-grid-list cols="5" rowHeight="5:1">
+            <mat-grid-tile style="border: solid 2px #000;">{{data._id}}</mat-grid-tile>
+            
+            <mat-grid-tile style="border: solid 2px #000;">{{data.year}}</mat-grid-tile>
+            
+            <mat-grid-tile style="border: solid 2px #000;">{{data.area}}</mat-grid-tile>
+            
+            <mat-grid-tile style="border: solid 2px #000;">{{data.rank}}</mat-grid-tile>
+            
+            <mat-grid-tile style="border: solid 2px #000;">{{data.domestic_exports}}</mat-grid-tile>
+          </mat-grid-list>
+    
+    </div>
+       
+      </div>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  
 </div>
 
 <router-outlet></router-outlet>

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { Record } from 'src/models/data/data.model';
-import { DataService } from 'src/data.service';
+import { DataService } from 'src/services/data/data.service';
 import { Format } from 'src/models/format/format.model';
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import { DialogComponent } from './dialog/dialog.component';
-import { RecordService } from 'src/record.service';
+import { RecordService } from 'src/services/record/record.service';
 import { ThisReceiver } from '@angular/compiler';
 
 @Component({
@@ -17,6 +17,7 @@ export class AppComponent {
   busqueda = '';
   allData: Record[];
   allRecords: Record[];
+  panelOpenState = false;
   constructor(
     private dataService: DataService,
     private recordService: RecordService,
