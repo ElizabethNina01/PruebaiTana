@@ -46,10 +46,22 @@ export class AppComponent {
     );
   
   }
-
+  delete(idd: number){
+    this.recordService.deleteRecord(idd).subscribe();
+    window.location.reload()
+  }
   openDialog(opcion: string) {
     
     this.dialog.open(DialogComponent,{data: opcion});
     
+  }
+  cargarData(){
+    this.allData.forEach(
+      Obj=>{
+        this.recordService.postRecord(Obj).subscribe();
+        console.log(Obj._id);
+      }
+    )
+    window.location.reload();
   }
 }

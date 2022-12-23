@@ -1,7 +1,14 @@
-<h1>{{opcion}}</h1>
 
+<div *ngIf="(opcion=='Eliminar'); else loggedOut">
+    <div>
+        <mat-form-field >
+            <mat-label>Id</mat-label>
+            <input [(ngModel)]='this.id' matInput>
+        </mat-form-field> 
+    </div>
+</div>
 
-<div *ngIf="(opcion=='Insertar') ||(opcion=='Modificar')">
+<ng-template #loggedOut>
     <div>
         <mat-form-field >
             <mat-label>Year</mat-label>
@@ -16,27 +23,14 @@
     </div>
     <div>
         <mat-form-field >
-            <mat-label>Rank</mat-label>
-            <input [(ngModel)]='this.rank' matInput>
-        </mat-form-field> 
-    </div>
-    <div>
-        <mat-form-field >
             <mat-label>Domestic exports</mat-label>
             <input [(ngModel)]='this.domestic' matInput>
         </mat-form-field> 
     </div>
-</div>
+</ng-template>
 
 
-<div *ngIf="(opcion=='Eliminar')||(opcion=='Modificar')">
-    <div>
-        <mat-form-field >
-            <mat-label>Id</mat-label>
-            <input [(ngModel)]='this.id' matInput>
-        </mat-form-field> 
-    </div>
-</div>
+
 
 
 <div>

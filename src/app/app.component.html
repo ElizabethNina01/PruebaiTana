@@ -20,7 +20,6 @@
     
     <mat-grid-tile style="background-color: rgb(0, 0, 162) ; color: aliceblue; font-weight:bold ;">Area</mat-grid-tile>
     
-    <mat-grid-tile style="background-color: rgb(0, 0, 162) ; color: aliceblue; font-weight:bold ;">Rank</mat-grid-tile>
     
     <mat-grid-tile style="background-color: rgb(0, 0, 162) ; color: aliceblue; font-weight:bold ;">Domestic exports</mat-grid-tile>
   </mat-grid-list>
@@ -34,9 +33,18 @@
         
         <mat-grid-tile style="border: solid 2px #000;">{{data.area}}</mat-grid-tile>
         
-        <mat-grid-tile style="border: solid 2px #000;">{{data.rank}}</mat-grid-tile>
-        
         <mat-grid-tile style="border: solid 2px #000;">{{data.domestic_exports}}</mat-grid-tile>
+        
+        <mat-grid-tile>
+          <button mat-raised-button color="primary" style="margin: 10px" (click)="openDialog(data._id.toString())">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="primary" (click)="delete(data._id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-grid-tile>
+
+        
       </mat-grid-list>
 
 </div>
@@ -44,14 +52,11 @@
   </div>
   
   
-
-
-  <div fxLayout="row" fxLayoutAlign="space-around center" class="bb" align="center">
-      
-    <button mat-raised-button color="primary" style="margin: 10px" (click)="openDialog('Insertar')">Insertar artículo</button>
-    <button mat-raised-button color="primary" style="margin: 10px" (click)="openDialog('Modificar')">Modificar artículo</button>
-    <button mat-raised-button color="primary" style="margin: 10px" (click)="openDialog('Eliminar')">Eliminar artículo</button>
- </div> 
+  <div fxLayout="row" fxLayoutAlign="space-around center" class="bb" align="center">   
+    <button mat-raised-button color="primary" style="margin: 10px" (click)="openDialog('Insertar')">Insertar dato</button>
+    <button mat-raised-button color="primary" style="margin: 10px" (click)="openDialog('Eliminar')">Eliminar dato</button>
+    <button mat-raised-button color="primary" style="margin: 10px" (click)="cargarData()">Cargar data original</button>
+  </div> 
   <br><br>
   
 
