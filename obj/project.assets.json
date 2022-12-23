@@ -7507,11 +7507,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Elizabeth\\subirback\\PruebaiTana\\BackendData.csproj",
+      "projectUniqueName": "C:\\Users\\Elizabeth\\origi\\PruebaiTana\\BackendData.csproj",
       "projectName": "BackendData",
-      "projectPath": "C:\\Users\\Elizabeth\\subirback\\PruebaiTana\\BackendData.csproj",
+      "projectPath": "C:\\Users\\Elizabeth\\origi\\PruebaiTana\\BackendData.csproj",
       "packagesPath": "C:\\Users\\Elizabeth\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Elizabeth\\subirback\\PruebaiTana\\obj\\",
+      "outputPath": "C:\\Users\\Elizabeth\\origi\\PruebaiTana\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Elizabeth\\AppData\\Roaming\\NuGet\\NuGet.Config",
