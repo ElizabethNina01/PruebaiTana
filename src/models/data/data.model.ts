@@ -1,4 +1,4 @@
-export class Data {
+export class Record {
     _id!: number;
     year!: string;
     area!: string;

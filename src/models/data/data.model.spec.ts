@@ -1,7 +1,7 @@
-import { Data } from './data.model';
+import { Record } from './data.model';
 
 describe('Data', () => {
   it('should create an instance', () => {
-    expect(new Data()).toBeTruthy();
+    expect(new Record()).toBeTruthy();
   });
 });

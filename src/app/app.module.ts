@@ -15,9 +15,15 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
+import { DialogComponent } from './dialog/dialog.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DialogComponent,
+  ],
+  entryComponents: [
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -32,10 +38,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatDialogModule,
     BrowserAnimationsModule,
     FormsModule, ReactiveFormsModule,
-    MatTableModule,
     MatFormFieldModule,
-    MatInputModule,
-    MatInputModule,
     MatIconModule,
     MatSelectModule,
   ],
